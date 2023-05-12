@@ -13,9 +13,7 @@ import {
   tRealEstateRepository,
   tRealEstateRequest,
 } from "../../interfaces/realState.interface";
-import {
-  realEstateSchemaResponse,
-} from "../../schemas/real_estate.schema";
+import { realEstateSchemaResponse } from "../../schemas/real_estate.schema";
 
 const createRealStateService = async (data: tRealEstateRequest) => {
   const addressRepository: tAddressRepository =
@@ -29,7 +27,7 @@ const createRealStateService = async (data: tRealEstateRequest) => {
     await categoriesRepository.findOneBy({
       id: Number(data.categoryId),
     });
-    const {sold,value,size} = data
+  const { sold, value, size } = data;
 
   const realEstateRepository: tRealEstateRepository =
     AppDataSource.getRepository(RealEstate);
@@ -37,12 +35,11 @@ const createRealStateService = async (data: tRealEstateRequest) => {
     sold: sold,
     value: value,
     size: size,
-    address: {...getAddress},
+    address: { ...getAddress },
     category: findCategory!,
   });
   await realEstateRepository.save(newRealEstate);
-  console.log(newRealEstate)
-  return realEstateSchemaResponse.parse(newRealEstate);
+  return newRealEstate;
 };
 
-export default createRealStateService
+export default createRealStateService;
