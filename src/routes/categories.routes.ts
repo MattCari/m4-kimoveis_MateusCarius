@@ -5,7 +5,7 @@ import ensureIsAdmin from "../middlewares/isAdmin.middleware";
 import validateBodyMiddleware from "../middlewares/validateBody.Middleware";
 import { categoryRequest } from "../schemas/categories.schema";
 import ensureCategoryNameIsUnique from "../middlewares/ensureCategoryNameIsUnique";
-import getCategoriesController from "../controllers/categoriesControllers/getCategoies.controller";
+import getCategoriesController from "../controllers/categoriesControllers/getCategories.controller";
 
 const categoriesRoutes: Router = Router();
 
