@@ -26,5 +26,12 @@ const realEstateSchemaResponse = realEstateSchema.extend({
   address: addressSchema,
   category: categoriesSchema,
 });
-const manyRealEstates = z.array(realEstateSchemaResponse)
-export {realEstateSchema, realEstateSchemaRequest, realEstateSchemaResponse, manyRealEstates}
+
+const manyRealEstates = z.array(realEstateSchemaResponse);
+
+export {
+  realEstateSchema,
+  realEstateSchemaRequest,
+  realEstateSchemaResponse,
+  manyRealEstates,
+};

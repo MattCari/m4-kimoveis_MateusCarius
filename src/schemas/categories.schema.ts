@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import {realEstateSchemaResponse } from './real_estate.schema'
 
 const categoriesSchema = z.object({
     id: z.number(),
@@ -11,4 +12,8 @@ const categoryRequest = categoriesSchema.omit({
 
 const manyCategoriesResponse = z.array(categoriesSchema)
 
-export {categoriesSchema, categoryRequest, manyCategoriesResponse}
+const categoryAndRealEstate = categoriesSchema.extend({
+    realEstate:realEstateSchemaResponse.omit({category: true})
+})
+
+export {categoriesSchema, categoryRequest, manyCategoriesResponse, categoryAndRealEstate}
