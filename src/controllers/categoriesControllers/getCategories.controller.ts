@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { tManyCategories } from "../../interfaces/categories.interface";
-import getCategoriesService from "../../services/categories.services/getCategories.service";
+import getCategoriesService from "../../services/categoriesServices/getCategories.service";
 
 const getCategoriesController = async (
   req: Request,

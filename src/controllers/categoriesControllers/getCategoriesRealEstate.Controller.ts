@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import getAllCategoriesRealEstatesService from "../../services/categories.services/getCategoriesRealEstate.service";
+import getAllCategoriesRealEstatesService from "../../services/categoriesServices/getCategoriesRealEstate.service";
 
 const getAllCategoriesRealEstatesController = async (req:Request,res:Response): Promise<Response> => {
     const {id} = req.params
