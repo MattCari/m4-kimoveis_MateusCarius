@@ -7,7 +7,7 @@ import {
   tScheduleRequest,
 } from "../../interfaces/schedules.interface";
 import { tUserRepo } from "../../interfaces/users.interface";
-import { allScheduleDataSchema } from "../../schemas/schedules.schema";
+
 
 const createSchedulesService = async (
   scheduleData: tScheduleRequest,

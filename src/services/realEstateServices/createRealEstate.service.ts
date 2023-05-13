@@ -13,7 +13,7 @@ import {
   tRealEstateRepository,
   tRealEstateRequest,
 } from "../../interfaces/realState.interface";
-import { realEstateSchemaResponse } from "../../schemas/real_estate.schema";
+
 
 const createRealStateService = async (data: tRealEstateRequest) => {
   const addressRepository: tAddressRepository =

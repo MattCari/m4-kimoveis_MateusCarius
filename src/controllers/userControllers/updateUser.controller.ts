@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import {
   tUser,
-  tUserRepo,
   tUserUpdate,
 } from "../../interfaces/users.interface";
 import updateUserService from "../../services/userServices/updateUser.service";
