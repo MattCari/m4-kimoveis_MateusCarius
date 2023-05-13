@@ -21,8 +21,7 @@ const verifyIfAddressIsUnique = async (
   if (findAddress) {
     throw new AppError("Address already exists", 409);
   }
-  console.log(findAddress)
-  console.log(address)
+
   return next();
 };
 export default verifyIfAddressIsUnique;
